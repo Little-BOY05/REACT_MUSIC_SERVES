@@ -1,0 +1,591 @@
+
+.nav_0 {
+	width: 100%;
+	max-width: 1140px;
+	
+	height: 270px;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto; /* center nav inside header/body */
+	img {
+		width: 270px;
+		height: 270px;
+		object-fit: contain;
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+	}
+	.navlink {
+		width: 178px; 
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 10px;
+		background-color: rgb(54, 206, 42);
+		color: white;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 22px;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		&:hover {
+			background-color: #006905;
+			transform: translateY(-3px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+}
+
+/* camelCase alias so JS can use styles.navLink */
+.navLink { @extend .navlink; }
+
+.info {
+	max-width: 1140px;
+  	width: 100%;
+  	margin: 0 auto;
+	color: white;
+	padding: 50px 20px;
+
+	overflow: hidden;
+	display: flex;
+	flex-direction: column; /* stack header, content, CTA */
+	align-items: center;
+	gap: 28px;
+	text-align: center;
+
+	h1 {
+		font-size: 48px;
+		margin: 0;
+		line-height: 1.05;
+		width: auto;
+		text-align: center;
+	}
+
+	/* keep feature list readable */
+	.features-list { li { color: white; } }
+
+	/* CTA flows after .box - make the info CTA match the site-wide CTA */
+	.cta-button {
+		width: 100%;
+		max-width: 366px;
+		height: 70px;
+		background-color: rgb(54, 206, 42);
+		color: white;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 24px;
+		transition: all 0.3s ease;
+		margin-top: 30px;
+		text-align: center;
+		display: flex;              /* делаем flex-контейнер */
+    	align-items: center;        /* центрируем по вертикали */
+    	justify-content: center;
+		&:hover {
+			background-color: #006905;
+			transform: translateY(-3px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+		}
+	}
+}
+.box {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	/* ensure text column doesn't grow too wide */
+	ul { max-width: 420px; text-align: left; }
+
+	img {
+		max-width: 560px;
+		width: 100%;
+		height: 320px;
+		border-radius: 10px;
+		object-fit: cover;
+		display: block;
+	}
+}
+.info-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+	margin-bottom: 40px;
+	color: white;
+}
+.reverse_photo {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+}
+.features-list {
+  max-width: 320px;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 22px;
+    line-height: 1.35;
+
+    &:before {
+      content: "•";
+      color: white;
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+}
+
+.services {
+	padding: 45px 0;
+	background-color: rgb(21, 21, 21);
+	h2 {
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 48px;
+		color: white;
+	}
+	.values {
+		display: grid;
+		flex-direction: column;
+		img {
+			width: 600px;
+			height: 400px;
+		}
+
+		.sub {
+			display: flex;
+			justify-content: space-evenly;
+			gap: 10px;
+			margin-bottom: 30px;
+
+			.pricing-card {
+				background: rgb(53, 53, 53);
+				border-radius: 10px;
+				padding: 30px;
+				/* slightly narrower so it doesn't overflow (reduced ~4%) */
+				width: 420px;
+				height: 400px;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+				text-align: center;
+				transition: transform 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				&:hover {
+					transform: translateY(-10px);
+				}
+				h3 {
+					color: rgb(179,179,179);
+					margin-bottom: 15px;
+					font-size: 48px;
+				}
+
+				.price {
+					font-size: 48px;
+					font-weight: bold;
+					margin: 20px 0;
+					color: rgb(179,179,179);
+					span {
+						font-size: 48px;
+						color: rgb(179,179,179);
+					}
+				}
+				
+				.service-button {
+					width: 366px;
+					height: 70px;
+					display:flex;
+					justify-content: center; 
+					background-color: rgb(54, 206, 42);
+					color: white;
+					padding: 12px 30px;
+					margin-top: 30px;
+					border-radius: 50px;
+					text-decoration: none;
+					font-weight: bold;
+					font-size: 24px;
+					transition: all 0.3s ease;
+					text-align: center;
+					align-items: center; /* выравнивание по вертикали */
+					cursor: pointer;
+					&:hover {
+						background-color: #006905;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+
+
+
+footer {
+  max-width: 1140px;
+  width: 100%;
+  margin: 40px auto 0 auto;
+  background-color: black;
+  padding: 40px 0;
+  text-align: center;
+
+  .footer-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}	
+	img {
+		width: 270px;
+		height: 270px;
+	}
+}
+.footer-container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.footer-column {
+	flex: 1;
+	float: left;
+	min-width: 180px;
+	margin-bottom: 20px;
+	h2 {
+		color: rgb(54, 206, 42);
+	}
+	p {
+		color: white;
+	}
+	a {
+		color: white;
+		user-select: none;
+		text-decoration: none;
+	}
+}
+.modal-form {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+}
+:global(#form-toggle) {
+	&:checked {
+		~ .modal-form {
+			display: flex;
+		}
+	}
+}
+.form-container {
+	background-color: #151515;
+	padding: 50px 60px;
+	border-radius: 30px;
+	max-width: 600px;
+	width: 90%;
+	color: white;
+	position: relative;
+	box-shadow: 0 0 25px rgba(0,0,0,0.4);
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	h2 {
+		font-size: 36px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+}
+.form-design {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	align-items: flex-start;
+	label {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		font-size: 18px;
+	}
+	input {
+		padding: 15px;
+		border: none;
+		border-radius: 10px;
+		background: rgb(53, 53, 53);
+		color: white;
+		font-size: 18px;
+		width: 100%;
+	}
+	textarea {
+		padding: 15px;
+		border: none;
+		border-radius: 10px;
+		background: rgb(53, 53, 53);
+		color: white;
+		font-size: 18px;
+		width: 100%;
+		height: 100px;
+		resize: vertical;
+	}
+	button {
+		align-self: center;
+	}
+	.service-button {
+		border: none;
+		width: 366px;
+		height: 70px;
+		display:flex;
+		justify-content: center; 
+		background-color: rgb(54, 206, 42);
+		color: white;
+		padding: 12px 30px;
+		margin-top: 30px;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 24px;
+		transition: all 0.3s ease;
+		text-align: center;
+		align-items: center; /* выравнивание по вертикали */
+		cursor: pointer;
+		&:hover {
+			background-color: #006905;
+		}
+	}
+}
+.close-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+	background: none;
+	border: none;
+}
+
+
+.toggle-auth {
+  text-align: center;
+  margin-bottom: 10px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+	font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+// До 1080px — перестройка header/footer
+@media (max-width: 1080px) {
+	header {
+		background-color: rgb(21, 21, 21);
+	}
+	.nav_0 {
+		justify-content: center;
+		flex-direction: column;
+		height: auto;
+		padding: 20px;
+		text-align: center;
+		width: 100%;
+		img {
+			width: 220px;
+			height: auto;
+		}
+		ul {
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+			width: 100%;
+		}
+		li {
+			a {
+				width: 188px;
+				height: 50px;
+				font-size: 20px;
+				padding: 12px;
+				margin: 0;
+				margin-bottom: 10px;
+				margin-right: 0;
+			}
+		}
+
+	}
+
+	.footer-container {
+   		flex-direction: column;
+    	align-items: center;
+  	}
+
+}
+
+
+@media (max-width: 1050px) {
+
+	.artist_info img { order: 1; }
+  .short_info_about_artist { order: 2; }
+  .artist_info .Choose_album { order: 3; }
+  .artist_info .albumList { order: 4; }
+
+	.info{
+		width: 100%;
+		max-width: 900px;
+	}
+	.box {
+    	display: flex; /* Используем flexbox */
+    	flex-direction: column-reverse; /* Обратное направление flex */
+		align-items: center; /* Выравнивание по центру по горизонтали */
+		width: 100%;
+    	justify-content: center; /* Выравнивание по центру по вертикали */
+
+		img{
+			max-width: 90%;
+			height: auto;
+		}
+
+		.features-list {
+    		font-size: 20px; /* Размер шрифта */
+    		max-width: 100%;
+    		
+  		}
+  	}
+	.reverse_photo {
+    	display: flex; /* Используем flexbox */
+    	flex-direction: column-reverse; /* Обратное направление flex */
+    	align-items: center; /* Выравнивание по центру по горизонтали */
+    	justify-content: center; /* Выравнивание по центру по вертикали */
+			
+
+  	}
+	.values {
+		max-width: 100%;
+		img{
+			width: 100%; /* На всю ширину */
+    		height: auto; /* Автоматическая высота */
+			border-radius: 30px;
+		}
+
+		.sub {
+    		flex-direction: column;   /* ломаем в колонку */
+    		align-items: center;
+    		justify-content: center;
+    		width: 100%;
+			padding-bottom: 10px;
+			img{
+				max-width: 85%;
+				width: 100%;
+				height: auto;	
+			}
+
+  		}
+  	}
+
+	.services .values .sub .pricing-card {
+   		width: 100%;
+    	max-width: 80%;
+    	height: auto;
+    	padding: 20px;
+		border-radius: 30px;
+  	}
+	
+}
+
+// До 950px — фон без отступов, колонки в одну
+@media (max-width: 950px) {
+  body, header, footer {
+    padding: 0; // убираем боковые отступы
+  }
+  .info {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 10px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// До 768px — уменьшение размеров элементов
+@media (max-width: 768px) {
+  .cta-button,
+  .service-button {
+    font-size: 20px;
+    height: 60px;
+    max-width: 300px;
+  }
+
+  .pricing-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    h3 { font-size: 36px; }
+  }
+
+  .price {
+    font-size: 36px;
+    span { font-size: 36px; }
+  }
+}
+
+// До 480px — мобильный вид
+@media (max-width: 480px) {
+  nav img {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav li a {
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .cta-button,
+  .service-button {
+    width: 220px;
+    font-size: 18px;
+    height: 50px;
+  }
+
+  footer img {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,30 @@
+
+
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Arial', sans-serif;
+	}
+
+body{
+    
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+	color: #333;
+	background-color: rgb(21, 21, 21);
+	display: flex;
+	flex-direction: column;
+	/* allow children (header/nav/etc.) to stretch to the body's width */
+	align-items: stretch;
+}
+
+/* make header full-bleed while inner nav remains centered via nav's max-width */
+header {
+	max-width: 1140px;
+  	width: 100%;
+  	margin: 0 auto;
+	background-color: black;
+}
+
